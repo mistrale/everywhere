@@ -1,23 +1,24 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QDesktopWidget>
-#include <QPropertyAnimation>
-#include <QGraphicsOpacityEffect>
+
+#include <iostream>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    resize(QDesktopWidget().availableGeometry(this).size());
-    QPalette palette;
-    palette.setColor(menuBar()->backgroundRole(), Qt::white);
-    menuBar()->setPalette(palette);
-    QObject::connect(&menu, SIGNAL(clicked()), this, SLOT(openMenu()));
+    QDesktopWidget w;
+    this->setFixedSize(w.width() * 0.8, w.height() * 0.8 - 5);
 
-    layout = new QGridLayout(&this->widget);
-    layout->setGeometry(QRect(100,100,200,200));
-    layout->setColumnMinimumWidth(0, 200);
+
+    _everywhereWidget = new GUI::EverywhereWindow(this);
+    _registrationWidget = new GUI::Registration(this);
+    _connectionWidget = new GUI::Connection(this);
+
+    _everywhereWidget->hide();
+    _registrationWidget->hide();
 }
 
 MainWindow::~MainWindow()
@@ -25,35 +26,17 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-#include <iostream>
+void        MainWindow::showConnection() {
+   _registrationWidget->hide();
+   _connectionWidget->show();
+}
 
-void MainWindow::openMenu() {
-    static bool isOpen = true;
+void        MainWindow::showRegistration() {
+   _connectionWidget->hide();
+   _registrationWidget->show();
+}
 
-    if (isOpen) {
-        menuList.hide();
-        isOpen = false;
-        QPropertyAnimation *animation = new QPropertyAnimation(&menuList, "pos");
-        animation->setDuration(300);
-        animation->setStartValue(menuList.pos());
-        animation->setEndValue(QPoint(-200, 41));
-
-
-        // to slide in call
-        animation->start();
-
-    }
-    else {
-        menuList.show();
-
-        // then a animation:
-        QPropertyAnimation *animation = new QPropertyAnimation(&menuList, "pos");
-        animation->setDuration(300);
-        animation->setStartValue(QPoint(-200, 41));
-        animation->setEndValue(menuList.pos());
-
-        // to slide in call
-        animation->start();
-        isOpen = true;
-    }
+void        MainWindow::showEverywhere() {
+   _connectionWidget->hide();
+   _everywhereWidget->show();
 }

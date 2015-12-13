@@ -6,24 +6,26 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>1150</width>
+    <height>720</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="verticalLayoutWidget">
+   <widget class="QLabel" name="background">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>401</width>
-      <height>251</height>
+      <width>1151</width>
+      <height>671</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout"/>
+    <property name="text">
+     <string/>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -31,22 +33,10 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
+     <width>1150</width>
      <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuPara_m_tres">
-    <property name="title">
-     <string>Paraèmètres</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuAde">
-    <property name="title">
-     <string>Aide</string>
-    </property>
-   </widget>
-   <addaction name="menuPara_m_tres"/>
-   <addaction name="menuAde"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">

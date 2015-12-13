@@ -2,8 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QPushButton>
-#include <QGridLayout>
+#include <connection.h>
+#include <registration.h>
+#include <everywherewindow.h>
 
 namespace Ui {
 class MainWindow;
@@ -17,16 +18,16 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-    QWidget menuList;
-    QPushButton menu;
-    QGridLayout *layout;
-    QWidget widget;
-
 public slots:
-    void openMenu();
+    void                    showRegistration();
+    void                    showConnection();
+    void                    showEverywhere();
 
 private:
-    Ui::MainWindow *ui;
+    Ui::MainWindow          *ui;
+    GUI::Connection         *_connectionWidget;
+    GUI::Registration       *_registrationWidget;
+    GUI::EverywhereWindow   *_everywhereWidget;
 };
 
 #endif // MAINWINDOW_H

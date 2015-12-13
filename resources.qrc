@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/">
+        <file>mainwindow.ui</file>
+        <file>images/account.png</file>
+        <file>images/background.png</file>
+        <file>images/backgroundbutton.png</file>
+        <file>images/backgroundbutton-pressed.png</file>
+        <file>images/email.png</file>
+        <file>images/everywhere.png</file>
+        <file>images/everywhere-pressed.png</file>
+        <file>images/everywhere-signin.png</file>
+        <file>images/everywhere-signin-pressed.png</file>
+        <file>images/facebook-signin.png</file>
+        <file>images/facebook-signin-pressed.png</file>
+        <file>images/google-signin.png</file>
+        <file>images/google-signin-pressed.png</file>
+        <file>images/lock.png</file>
+        <file>images/logo.png</file>
+        <file>images/separator.png</file>
+        <file>images/google-signup.png</file>
+        <file>images/google-signup-pressed.png</file>
+        <file>images/facebook-signup.png</file>
+        <file>images/facebook-signup-pressed.png</file>
+        <file>images/separator.gif</file>
+        <file>images/back.png</file>
+    </qresource>
+</RCC>
