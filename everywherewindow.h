@@ -20,7 +20,6 @@ namespace GUI {
 
     private:
         Ui::EverywhereWindow *ui;
-        QMovie          *_background;
     };
 }
 

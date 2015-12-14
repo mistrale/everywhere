@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1150</width>
-    <height>720</height>
+    <width>250</width>
+    <height>450</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
   <widget class="QWidget" name="mainWidget" native="true">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>135</y>
+     <x>0</x>
+     <y>0</y>
      <width>250</width>
      <height>450</height>
     </rect>
@@ -294,21 +294,8 @@ QPushButton#signinButton:pressed {
     </layout>
    </widget>
   </widget>
-  <widget class="QLabel" name="background">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1151</width>
-     <height>721</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <zorder>background</zorder>
   <zorder>mainWidget</zorder>
+  <zorder>verticalLayoutWidget</zorder>
  </widget>
  <resources/>
  <connections/>

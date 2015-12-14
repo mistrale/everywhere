@@ -28,6 +28,8 @@ private:
     GUI::Connection         *_connectionWidget;
     GUI::Registration       *_registrationWidget;
     GUI::EverywhereWindow   *_everywhereWidget;
+
+    QMovie          *_background;
 };
 
 #endif // MAINWINDOW_H

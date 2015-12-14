@@ -18,7 +18,6 @@ namespace GUI {
 
     private:
         Ui::Connection *ui;
-        QMovie          *_background;
     };
 }
 

@@ -10,12 +10,17 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     QDesktopWidget w;
-    this->setFixedSize(w.width() * 0.8, w.height() * 0.8 - 5);
-
+    this->setFixedSize(w.width() * 0.8, w.height() * 0.8);
+    _background = new QMovie("C:/Users/Aude/Documents/QT Project/Everywhere/images/sound.gif");
+    ui->background->setMovie(_background);
+    _background->start();
 
     _everywhereWidget = new GUI::EverywhereWindow(this);
     _registrationWidget = new GUI::Registration(this);
+    _registrationWidget->move(325, 210);
+
     _connectionWidget = new GUI::Connection(this);
+    _connectionWidget->move(450, 135);
 
     _everywhereWidget->hide();
     _registrationWidget->hide();
@@ -37,6 +42,8 @@ void        MainWindow::showRegistration() {
 }
 
 void        MainWindow::showEverywhere() {
+   _background->stop();
+   delete _background;
    _connectionWidget->hide();
    _everywhereWidget->show();
 }

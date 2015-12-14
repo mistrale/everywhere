@@ -6,31 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1150</width>
-    <height>720</height>
+    <width>498</width>
+    <height>299</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="background">
+  <widget class="QWidget" name="mainWidget" native="true">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1151</width>
-     <height>721</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QWidget" name="mainWidget" native="true">
-   <property name="geometry">
-    <rect>
-     <x>325</x>
-     <y>170</y>
      <width>500</width>
      <height>300</height>
     </rect>
@@ -63,76 +50,79 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="2">
-      <widget class="QWidget" name="widget_3" native="true">
-       <property name="styleSheet">
-        <string notr="true">background: rgba(86,86,86, 0);</string>
+     <item row="0" column="0" colspan="3">
+      <widget class="QWidget" name="registrationWidget" native="true">
+       <property name="enabled">
+        <bool>true</bool>
        </property>
-       <widget class="QWidget" name="verticalLayoutWidget_2">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QWidget#registrationWidget {
+	background: rgba(3, 151, 229, 0.7);
+	margin-bottom: 10px;
+}</string>
+       </property>
+       <widget class="QWidget" name="horizontalLayoutWidget">
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>50</y>
-          <width>211</width>
-          <height>111</height>
+          <y>-1</y>
+          <width>501</width>
+          <height>71</height>
          </rect>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_2">
-         <item alignment="Qt::AlignHCenter">
-          <widget class="QPushButton" name="googleButton">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="leftMargin">
+          <number>13</number>
+         </property>
+         <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
+          <widget class="QPushButton" name="backButton">
            <property name="minimumSize">
             <size>
-             <width>190</width>
-             <height>40</height>
+             <width>48</width>
+             <height>48</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
-             <width>190</width>
-             <height>40</height>
+             <width>48</width>
+             <height>48</height>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">QPushButton#googleButton {
-	background: url(:/images/google-signin.png) no-repeat;
-	border-radius:10px;
-}
-
-QPushButton#googleButton:pressed {
-	background: url(:/images/google-signin-pressed.png) no-repeat;
+            <string notr="true">QPushButton#backButton {
+	border:none;
+	background: url(:/images/back.png);
 }</string>
            </property>
            <property name="text">
             <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>images/back.png</normaloff>images/back.png</iconset>
            </property>
           </widget>
          </item>
-         <item alignment="Qt::AlignHCenter">
-          <widget class="QPushButton" name="facebookButton">
-           <property name="minimumSize">
-            <size>
-             <width>190</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>190</width>
-             <height>40</height>
-            </size>
-           </property>
+         <item>
+          <widget class="QLabel" name="registrationLabel">
            <property name="styleSheet">
-            <string notr="true">QPushButton#facebookButton {
-	background: url(:/images/facebook-signin.png) no-repeat;
-	border-radius:10px;
-}
-
-QPushButton#facebookButton:pressed {
-	background: url(:/images/facebook-signin-pressed.png) no-repeat;
+            <string notr="true">QLabel#registrationLabel {
+	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+	color: white;
+	font-weight: bold;
 }</string>
            </property>
            <property name="text">
-            <string/>
+            <string>SIGN IN</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
            </property>
           </widget>
          </item>
@@ -281,79 +271,76 @@ QPushButton#signinButton:pressed {
        </widget>
       </widget>
      </item>
-     <item row="0" column="0" colspan="3">
-      <widget class="QWidget" name="registrationWidget" native="true">
-       <property name="enabled">
-        <bool>true</bool>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>70</height>
-        </size>
-       </property>
+     <item row="1" column="2">
+      <widget class="QWidget" name="widget_3" native="true">
        <property name="styleSheet">
-        <string notr="true">QWidget#registrationWidget {
-	background: rgba(3, 151, 229, 0.7);
-	margin-bottom: 10px;
-}</string>
+        <string notr="true">background: rgba(86,86,86, 0);</string>
        </property>
-       <widget class="QWidget" name="horizontalLayoutWidget">
+       <widget class="QWidget" name="verticalLayoutWidget_2">
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-1</y>
-          <width>501</width>
-          <height>71</height>
+          <y>50</y>
+          <width>211</width>
+          <height>111</height>
          </rect>
         </property>
-        <layout class="QHBoxLayout" name="horizontalLayout">
-         <property name="leftMargin">
-          <number>13</number>
-         </property>
-         <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
-          <widget class="QPushButton" name="backButton">
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QPushButton" name="googleButton">
            <property name="minimumSize">
             <size>
-             <width>48</width>
-             <height>48</height>
+             <width>190</width>
+             <height>40</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
-             <width>48</width>
-             <height>48</height>
+             <width>190</width>
+             <height>40</height>
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">QPushButton#backButton {
-	border:none;
-	background: url(:/images/back.png);
+            <string notr="true">QPushButton#googleButton {
+	background: url(:/images/google-signin.png) no-repeat;
+	border-radius:10px;
+}
+
+QPushButton#googleButton:pressed {
+	background: url(:/images/google-signin-pressed.png) no-repeat;
 }</string>
            </property>
            <property name="text">
             <string/>
            </property>
-           <property name="icon">
-            <iconset>
-             <normaloff>images/back.png</normaloff>images/back.png</iconset>
-           </property>
           </widget>
          </item>
-         <item>
-          <widget class="QLabel" name="registrationLabel">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QPushButton" name="facebookButton">
+           <property name="minimumSize">
+            <size>
+             <width>190</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>190</width>
+             <height>40</height>
+            </size>
+           </property>
            <property name="styleSheet">
-            <string notr="true">QLabel#registrationLabel {
-	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
-	color: white;
-	font-weight: bold;
+            <string notr="true">QPushButton#facebookButton {
+	background: url(:/images/facebook-signin.png) no-repeat;
+	border-radius:10px;
+}
+
+QPushButton#facebookButton:pressed {
+	background: url(:/images/facebook-signin-pressed.png) no-repeat;
 }</string>
            </property>
            <property name="text">
-            <string>SIGN IN</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
+            <string/>
            </property>
           </widget>
          </item>

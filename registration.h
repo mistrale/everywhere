@@ -19,7 +19,6 @@ namespace GUI {
 
     private:
         Ui::Registration *ui;
-        QMovie           *_background;
     };
 }
 
