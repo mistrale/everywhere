@@ -1,24 +1,22 @@
 #ifndef RESEARCH_H
 #define RESEARCH_H
 
-#include <QWidget>
+#include <QDialog>
 
 namespace Ui {
-class Research;
+class research;
 }
 
-namespace GUI {
-    class Research : public QWidget
-    {
-        Q_OBJECT
+class research : public QDialog
+{
+    Q_OBJECT
 
-    public:
-        explicit Research(QWidget *parent = 0);
-        ~Research();
+public:
+    explicit research(QWidget *parent = 0);
+    ~research();
 
-    private:
-        Ui::Research *ui;
-    };
-}
+private:
+    Ui::research *ui;
+};
 
 #endif // RESEARCH_H

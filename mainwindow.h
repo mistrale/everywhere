@@ -30,7 +30,6 @@ private:
     GUI::Connection         *_connectionWidget;
     GUI::Registration       *_registrationWidget;
     GUI::EverywhereWindow   *_everywhereWidget;
-    GUI::Research           *_researchWidget;
 
     QMovie          *_background;
 };
