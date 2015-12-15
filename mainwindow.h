@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+
+#include <research.h>
 #include <connection.h>
 #include <registration.h>
 #include <everywherewindow.h>
@@ -28,6 +30,7 @@ private:
     GUI::Connection         *_connectionWidget;
     GUI::Registration       *_registrationWidget;
     GUI::EverywhereWindow   *_everywhereWidget;
+    GUI::Research           *_researchWidget;
 
     QMovie          *_background;
 };

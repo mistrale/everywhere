@@ -17,17 +17,20 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     connection.cpp \
     registration.cpp \
-    everywherewindow.cpp
+    everywherewindow.cpp \
+    research.cpp
 
 HEADERS  += mainwindow.h \
     connection.h \
     registration.h \
-    everywherewindow.h
+    everywherewindow.h \
+    research.h
 
 FORMS    += mainwindow.ui \
     connection.ui \
     registration.ui \
-    everywherewindow.ui
+    everywherewindow.ui \
+    research.ui
 
 RESOURCES += \
     resources.qrc

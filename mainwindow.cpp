@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "ui_everywherewindow.h"
+
 #include <QDesktopWidget>
 
 #include <iostream>
@@ -10,19 +12,22 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     QDesktopWidget w;
-    this->setFixedSize(w.width() * 0.8, w.height() * 0.8);
+    this->setFixedSize(1150, 720);
     _background = new QMovie("C:/Users/Aude/Documents/QT Project/Everywhere/images/sound.gif");
     ui->background->setMovie(_background);
     _background->start();
 
     QPixmap bkgnd(":/images/background.png");
     bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
-    std::cout << bkgnd.size().height() << std::endl;
     QPalette palette;
     palette.setBrush(QPalette::Background, bkgnd);
     this->setPalette(palette);
 
+
+    _researchWidget = new GUI::Research(this);
+
     _everywhereWidget = new GUI::EverywhereWindow(this);
+
     _registrationWidget = new GUI::Registration(this);
     _registrationWidget->move(325, 210);
 
@@ -53,5 +58,6 @@ void        MainWindow::showEverywhere() {
    delete _background;
    ui->background->hide();
    _connectionWidget->hide();
+
    _everywhereWidget->show();
 }

@@ -12,3 +12,4 @@ GUI::EverywhereWindow::~EverywhereWindow()
 {
     delete ui;
 }
+

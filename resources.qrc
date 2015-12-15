@@ -23,5 +23,7 @@
         <file>images/facebook-signup-pressed.png</file>
         <file>images/separator.gif</file>
         <file>images/back.png</file>
+        <file>images/menuButton.png</file>
+        <file>images/searchButton.png</file>
     </qresource>
 </RCC>
