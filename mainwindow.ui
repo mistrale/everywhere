@@ -14,8 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: black;
-background-image: url(:/images/background.png);</string>
+   <string notr="true"/>
   </property>
   <property name="animated">
    <bool>true</bool>
@@ -43,7 +42,7 @@ background-image: url(:/images/background.png);</string>
      <string notr="true"/>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
     </property>
    </widget>
   </widget>

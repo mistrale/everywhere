@@ -15,6 +15,13 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->background->setMovie(_background);
     _background->start();
 
+    QPixmap bkgnd(":/images/background.png");
+    bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
+    std::cout << bkgnd.size().height() << std::endl;
+    QPalette palette;
+    palette.setBrush(QPalette::Background, bkgnd);
+    this->setPalette(palette);
+
     _everywhereWidget = new GUI::EverywhereWindow(this);
     _registrationWidget = new GUI::Registration(this);
     _registrationWidget->move(325, 210);
@@ -44,6 +51,7 @@ void        MainWindow::showRegistration() {
 void        MainWindow::showEverywhere() {
    _background->stop();
    delete _background;
+   ui->background->hide();
    _connectionWidget->hide();
    _everywhereWidget->show();
 }
