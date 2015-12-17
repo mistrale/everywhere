@@ -1,9 +1,15 @@
 #ifndef EVERYWHEREWINDOW_H
 #define EVERYWHEREWINDOW_H
 
-#include <QWidget>
+#include <vector>
 
+#include <QWidget>
 #include <QMovie>
+#include <QPropertyAnimation>
+#include <QParallelAnimationGroup>
+#include <QPushButton>
+
+#include <QGraphicsItemAnimation>
 
 namespace Ui {
 class EverywhereWindow;
@@ -18,8 +24,24 @@ namespace GUI {
         explicit EverywhereWindow(QWidget *parent = 0);
         ~EverywhereWindow();
 
+        void                                closeMenu();
+        void                                openMenu();
+        void                                createQPropertyAnimationButton(const QRect &,
+                                                                           const QRect &,
+                                                                           QPushButton *,
+                                                                           QParallelAnimationGroup *);
+
+    public slots:
+        void                                manageMenu();
+
     private:
         Ui::EverywhereWindow *ui;
+
+        QParallelAnimationGroup             *_closeAnimations;
+        QParallelAnimationGroup             *_openAnimations;
+        QPropertyAnimation                  *_test;
+        QGraphicsItemAnimation              *_test2;
+        bool                                _menuOpen;
     };
 }
 

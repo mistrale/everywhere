@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
+    <width>1000</width>
     <height>800</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>1200</width>
+    <width>1000</width>
     <height>800</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1200</width>
-    <height>800</height>
+    <width>1000</width>
+    <height>1500</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -33,430 +33,25 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1201</width>
+     <width>1012</width>
      <height>801</height>
     </rect>
    </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <property name="horizontalSpacing">
+   <layout class="QGridLayout" name="gridLayout" rowstretch="0,0" rowminimumheight="0,250">
+    <property name="spacing">
      <number>0</number>
     </property>
-    <property name="verticalSpacing">
-     <number>1</number>
-    </property>
-    <item row="1" column="0">
-     <widget class="QWidget" name="widget" native="true">
-      <property name="minimumSize">
-       <size>
-        <width>250</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>200</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background: rgb(3, 151, 229);
-border-right:1px solid black;</string>
-      </property>
-      <widget class="QWidget" name="verticalLayoutWidget">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>2451</width>
-         <height>751</height>
-        </rect>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout">
-        <property name="spacing">
-         <number>0</number>
-        </property>
-        <item>
-         <widget class="QPushButton" name="newsButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>250</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton#newsButton {
-	border:none;
-	border-bottom: 1px solid white;
-	background: rgb(40,40,40);
-	text-align:left;
-	padding-left: 20px;
-	color: white;
-	font: 75 12pt &quot;Aharoni&quot;;
-}
-
-QPushButton#newsButton:hover {
-	background: rgb(126,126,126);
-}</string>
-          </property>
-          <property name="text">
-           <string>News</string>
-          </property>
-          <property name="icon">
-           <iconset resource="resources.qrc">
-            <normaloff>:/images/news.png</normaloff>:/images/news.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>36</width>
-            <height>36</height>
-           </size>
-          </property>
-          <property name="autoRepeat">
-           <bool>false</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="advancedButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>250</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton#advancedButton {
-	border:none;
-	border-bottom: 1px solid white;
-	background: rgb(40,40,40);
-	text-align:left;
-	padding-left: 20px;
-	color: white;
-	font: 75 12pt &quot;Aharoni&quot;;
-}</string>
-          </property>
-          <property name="text">
-           <string>Advanced research</string>
-          </property>
-          <property name="icon">
-           <iconset resource="resources.qrc">
-            <normaloff>:/images/searchbig.png</normaloff>:/images/searchbig.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>36</width>
-            <height>36</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="subscriptionButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>250</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton#subscriptionButton {
-	border:none;
-	border-bottom: 1px solid white;
-	background: rgb(40,40,40);
-	text-align:left;
-	padding-left: 20px;
-	color: white;
-	font: 75 12pt &quot;Aharoni&quot;;
-}</string>
-          </property>
-          <property name="text">
-           <string>Subscription</string>
-          </property>
-          <property name="icon">
-           <iconset resource="resources.qrc">
-            <normaloff>:/images/share.png</normaloff>:/images/share.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>36</width>
-            <height>36</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="profilButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>250</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton#profilButton {
-	border:none;
-	border-bottom: 1px solid white;
-	background: rgb(40,40,40);
-	text-align:left;
-	padding-left: 20px;
-	color: white;
-	font: 75 12pt &quot;Aharoni&quot;;
-}</string>
-          </property>
-          <property name="text">
-           <string>Profil</string>
-          </property>
-          <property name="icon">
-           <iconset resource="resources.qrc">
-            <normaloff>:/images/profil.png</normaloff>:/images/profil.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>36</width>
-            <height>36</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="libraryButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>250</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton#libraryButton {
-	border:none;
-	border-bottom: 1px solid white;
-	background: rgb(40,40,40);
-	text-align:left;
-	padding-left: 20px;
-	color: white;
-	font: 75 12pt &quot;Aharoni&quot;;
-}</string>
-          </property>
-          <property name="text">
-           <string>Library</string>
-          </property>
-          <property name="icon">
-           <iconset resource="resources.qrc">
-            <normaloff>:/images/library.png</normaloff>:/images/library.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>36</width>
-            <height>36</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="downloadButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>250</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton#downloadButton {
-	border:none;
-	border-bottom: 1px solid white;
-	background: rgb(40,40,40);
-	text-align:left;
-	padding-left: 20px;
-	color: white;
-	font: 75 12pt &quot;Aharoni&quot;;
-}</string>
-          </property>
-          <property name="text">
-           <string>Downloads</string>
-          </property>
-          <property name="icon">
-           <iconset resource="resources.qrc">
-            <normaloff>:/images/download.png</normaloff>:/images/download.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>36</width>
-            <height>36</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="synchronizationButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>250</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton#synchronizationButton {
-	border:none;
-	border-bottom: 1px solid white;
-	background: rgb(40,40,40);
-	text-align:left;
-	padding-left: 20px;
-	color: white;
-	font: 75 12pt &quot;Aharoni&quot;;
-}</string>
-          </property>
-          <property name="text">
-           <string>Synchronization</string>
-          </property>
-          <property name="icon">
-           <iconset resource="resources.qrc">
-            <normaloff>:/images/synchronization.png</normaloff>:/images/synchronization.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>36</width>
-            <height>36</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="streamButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>250</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton#streamButton {
-	border:none;
-	border-bottom: 1px solid white;
-	background: rgb(40,40,40);
-	text-align:left;
-	padding-left: 20px;
-	color: white;
-	font: 75 12pt &quot;Aharoni&quot;;
-}</string>
-          </property>
-          <property name="text">
-           <string>Stream</string>
-          </property>
-          <property name="icon">
-           <iconset resource="resources.qrc">
-            <normaloff>:/images/stream.png</normaloff>:/images/stream.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>36</width>
-            <height>36</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="disconnectButton">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>250</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton#disconnectButton {
-	border:none;
-	border-bottom: 1px solid white;
-	background: rgb(40,40,40);
-	text-align:left;
-	padding-left: 20px;
-	color: white;
-	font: 75 12pt &quot;Aharoni&quot;;
-}</string>
-          </property>
-          <property name="text">
-           <string>Disconnect</string>
-          </property>
-          <property name="icon">
-           <iconset resource="resources.qrc">
-            <normaloff>:/images/disconnect.png</normaloff>:/images/disconnect.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>36</width>
-            <height>36</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-    </item>
     <item row="0" column="0" colspan="2">
      <widget class="QWidget" name="menuWidget" native="true">
       <property name="minimumSize">
        <size>
-        <width>50</width>
+        <width>1000</width>
         <height>0</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
-        <width>16777215</width>
+        <width>1000</width>
         <height>50</height>
        </size>
       </property>
@@ -471,7 +66,7 @@ QPushButton#newsButton:hover {
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1201</width>
+         <width>1001</width>
          <height>52</height>
         </rect>
        </property>
@@ -537,7 +132,7 @@ QPushButton#newsButton:hover {
           </property>
           <property name="styleSheet">
            <string notr="true">QLineEdit#searchEdit {
-	margin-left: 250px;
+	margin-left: 100px;
 	background: white;
 	border-top-left-radius: 5px;
 	border-bottom-left-radius:5px;
@@ -742,11 +337,337 @@ QPushButton#newsButton:hover {
       </widget>
      </widget>
     </item>
-    <item row="1" column="1">
-     <widget class="QWidget" name="widget_2" native="true">
-      <property name="styleSheet">
-       <string notr="true">background: url(:/images/background.png);</string>
+    <item row="1" column="0" colspan="2">
+     <widget class="QWidget" name="globalWidget" native="true">
+      <property name="maximumSize">
+       <size>
+        <width>1000</width>
+        <height>750</height>
+       </size>
       </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget#globalWidget {
+	background: url(:/images/background.png);
+}
+
+border:1px solid white;</string>
+      </property>
+      <widget class="QWidget" name="gridLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1001</width>
+         <height>751</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="menuLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="1" column="1">
+         <widget class="QWidget" name="subscriptionWidget" native="true">
+          <widget class="QPushButton" name="subscriptionButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>381</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;:/images/subscriptionBackground.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;:/images/subscriptionBackground-hover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QListView" name="listView">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>331</width>
+             <height>251</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QWidget" name="synchronizationWidget" native="true">
+          <widget class="QPushButton" name="synchronizationButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;:/images/synchronizationBackground.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;:/images/synchronizationBackground-hover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QWidget" name="shareWidget" native="true">
+          <widget class="QPushButton" name="shareButton">
+           <property name="geometry">
+            <rect>
+             <x>2</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>333</width>
+             <height>250</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;:/images/shareBackground.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;:/images/shareBackground-hover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>333</width>
+             <height>250</height>
+            </size>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QWidget" name="streamWidget" native="true">
+          <widget class="QPushButton" name="streamButton">
+           <property name="geometry">
+            <rect>
+             <x>2</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;:/images/streamBackground.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;:/images/streamBackground-hover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QWidget" name="downloadWidget" native="true">
+          <widget class="QPushButton" name="downloadButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;:/images/downloadBackground.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;:/images/downloadBackground-hover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QWidget" name="profilWidget" native="true">
+          <widget class="QPushButton" name="profilButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;:/images/profilBackground.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;:/images/profilBackground-hover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QWidget" name="newWidget" native="true">
+          <widget class="QPushButton" name="newButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>333</width>
+             <height>250</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;:/images/newBackground.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;:/images/newBackground-hover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QWidget" name="disconnectWidget" native="true">
+          <widget class="QPushButton" name="disconnectButton">
+           <property name="geometry">
+            <rect>
+             <x>2</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>333</width>
+             <height>250</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>333</width>
+             <height>250</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;:/images/disconnectBackground.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;:/images/disconnectBackground-hover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QWidget" name="libraryWidget" native="true">
+          <widget class="QPushButton" name="libraryButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>333</width>
+             <height>250</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;:/images/libraryBackground.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;:/images/libraryBackground-hover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>333</width>
+             <height>250</height>
+            </size>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </item>
    </layout>

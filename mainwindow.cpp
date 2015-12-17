@@ -7,7 +7,7 @@
 
 #include <iostream>
 
-#define WIN_WIDTH 1200
+#define WIN_WIDTH 1000
 #define WIN_HEIGHT 800
 
 MainWindow::MainWindow(QWidget *parent) :
