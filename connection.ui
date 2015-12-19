@@ -92,7 +92,7 @@
        <property name="styleSheet">
         <string notr="true">QLineEdit#usernameEdit {
 	border-radius: 10px;
-	background: url(:/images/account.png)  no-repeat;
+	background: url(C:/Everywhere/images/account.png)  no-repeat;
 	padding-left: 45 px;
 	color: rgb(3, 151, 229);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
@@ -121,7 +121,7 @@
        <property name="styleSheet">
         <string notr="true">QLineEdit#passwordEdit {
 	border-radius: 10px;
-	background: url(:/images/lock.png)  no-repeat;
+	background: url(C:/Everywhere/images/lock.png)  no-repeat;
 	padding-left: 45 px;
 	color: rgb(3, 151, 229);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
@@ -149,7 +149,7 @@
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton#connectButton {
-	background: url(:/images/backgroundbutton.png) no-repeat;
+	background: url(C:/Everywhere/images/backgroundbutton.png) no-repeat;
 	border-radius:10px;
 	color: white;
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
@@ -157,7 +157,7 @@
 }
 
 QPushButton#connectButton:pressed {
-	background: url(:/images/backgroundbutton-pressed.png) no-repeat;
+	background: url(C:/Everywhere/images/backgroundbutton-pressed.png) no-repeat;
 }</string>
        </property>
        <property name="text">
@@ -199,12 +199,12 @@ QPushButton#connectButton:pressed {
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton#googleButton {
-	background: url(:/images/google-signup.png) no-repeat;
+	background: url(C:/Everywhere/images/google-signup.png) no-repeat;
 	border-radius:10px;
 }
 
 QPushButton#googleButton:pressed {
-	background: url(:/images/google-signup-pressed.png) no-repeat;
+	background: url(C:/Everywhere/images/google-signup-pressed.png) no-repeat;
 }</string>
        </property>
        <property name="text">
@@ -228,12 +228,12 @@ QPushButton#googleButton:pressed {
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton#facebookButton {
-	background: url(:/images/facebook-signup.png) no-repeat;
+	background: url(C:/Everywhere/images/facebook-signup.png) no-repeat;
 	border-radius:10px;
 }
 
 QPushButton#facebookButton:pressed {
-	background: url(:/images/facebook-signup-pressed.png) no-repeat;
+	background: url(C:/Everywhere/images/facebook-signup-pressed.png) no-repeat;
 }</string>
        </property>
        <property name="text">
@@ -275,7 +275,7 @@ QPushButton#facebookButton:pressed {
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton#signinButton {
-	background: url(:/images/backgroundbutton.png) no-repeat;
+	background: url(C:/Everywhere/images/backgroundbutton.png) no-repeat;
 	border-radius:10px;
 	color: white;
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
@@ -283,7 +283,7 @@ QPushButton#facebookButton:pressed {
 }
 
 QPushButton#signinButton:pressed {
-	background: url(:/images/backgroundbutton-pressed.png) no-repeat;
+	background: url(C:/Everywhere/images/backgroundbutton-pressed.png) no-repeat;
 }</string>
        </property>
        <property name="text">
@@ -294,8 +294,6 @@ QPushButton#signinButton:pressed {
     </layout>
    </widget>
   </widget>
-  <zorder>mainWidget</zorder>
-  <zorder>verticalLayoutWidget</zorder>
  </widget>
  <resources/>
  <connections/>

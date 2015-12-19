@@ -3,7 +3,6 @@
 
 #include <QMainWindow>
 
-#include <research.h>
 #include <connection.h>
 #include <registration.h>
 #include <everywherewindow.h>

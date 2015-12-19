@@ -46,7 +46,7 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">background: url(:/images/separator.gif) no-repeat;</string>
+        <string notr="true">background: url(C:/Everywhere/images/separator.gif) no-repeat;</string>
        </property>
       </widget>
      </item>
@@ -107,6 +107,12 @@
             <iconset>
              <normaloff>images/back.png</normaloff>images/back.png</iconset>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
           </widget>
          </item>
          <item>
@@ -165,7 +171,7 @@
            <property name="styleSheet">
             <string notr="true">QLineEdit#emailEdit {
 	border-radius: 10px;
-	background: url(:/images/account.png)  no-repeat;
+	background: url(C:/Everywhere/images/account.png)  no-repeat;
 	padding-left: 45 px;
 	color: rgb(3, 151, 229);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
@@ -194,7 +200,7 @@
            <property name="styleSheet">
             <string notr="true">QLineEdit#passwordEdit {
 	border-radius: 10px;
-	background: url(:/images/lock.png)  no-repeat;
+	background: url(C:/Everywhere/images/lock.png)  no-repeat;
 	padding-left: 45 px;
 	color: rgb(3, 151, 229);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
@@ -223,7 +229,7 @@
            <property name="styleSheet">
             <string notr="true">QLineEdit#passwordConfirmationEdit {
 	border-radius: 10px;
-	background: url(:/images/account.png)  no-repeat;
+	background: url(C:/Everywhere/images/account.png)  no-repeat;
 	padding-left: 45 px;
 	color: rgb(3, 151, 229);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
@@ -251,7 +257,7 @@
            </property>
            <property name="styleSheet">
             <string notr="true">QPushButton#signinButton {
-	background: url(:/images/backgroundbutton.png) no-repeat;
+	background: url(C:/Everywhere/images/backgroundbutton.png) no-repeat;
 	border-radius:10px;
 	color: white;
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
@@ -259,7 +265,7 @@
 }
 
 QPushButton#signinButton:pressed {
-	background: url(:/images/backgroundbutton-pressed.png) no-repeat;
+	background: url(C:/Everywhere/images/backgroundbutton-pressed.png) no-repeat;
 }</string>
            </property>
            <property name="text">
@@ -302,12 +308,12 @@ QPushButton#signinButton:pressed {
            </property>
            <property name="styleSheet">
             <string notr="true">QPushButton#googleButton {
-	background: url(:/images/google-signin.png) no-repeat;
+	background: url(C:/Everywhere/images/google-signin.png) no-repeat;
 	border-radius:10px;
 }
 
 QPushButton#googleButton:pressed {
-	background: url(:/images/google-signin-pressed.png) no-repeat;
+	background: url(C:/Everywhere/images/google-signin-pressed.png) no-repeat;
 }</string>
            </property>
            <property name="text">
@@ -331,12 +337,12 @@ QPushButton#googleButton:pressed {
            </property>
            <property name="styleSheet">
             <string notr="true">QPushButton#facebookButton {
-	background: url(:/images/facebook-signin.png) no-repeat;
+	background: url(C:/Everywhere/images/facebook-signin.png) no-repeat;
 	border-radius:10px;
 }
 
 QPushButton#facebookButton:pressed {
-	background: url(:/images/facebook-signin-pressed.png) no-repeat;
+	background: url(C:/Everywhere/images/facebook-signin-pressed.png) no-repeat;
 }</string>
            </property>
            <property name="text">

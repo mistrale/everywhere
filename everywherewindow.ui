@@ -26,7 +26,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background:transparent;</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="gridLayoutWidget">
    <property name="geometry">
@@ -37,10 +37,339 @@
      <height>801</height>
     </rect>
    </property>
-   <layout class="QGridLayout" name="gridLayout" rowstretch="0,0" rowminimumheight="0,250">
+   <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0">
     <property name="spacing">
      <number>0</number>
     </property>
+    <item row="2" column="0" colspan="2">
+     <widget class="QWidget" name="globalWidget" native="true">
+      <property name="maximumSize">
+       <size>
+        <width>1000</width>
+        <height>750</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <widget class="QWidget" name="gridLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1001</width>
+         <height>751</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="menuLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="1" column="1">
+         <widget class="QWidget" name="subscriptionWidget" native="true">
+          <widget class="QPushButton" name="shareButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;C:/Everywhere/images/shareBackgroundButton.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;C:/Everywhere/images/shareBackgroundButtonHover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>333</width>
+             <height>250</height>
+            </size>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QWidget" name="synchronizationWidget" native="true">
+          <widget class="QPushButton" name="synchronizationButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;C:/Everywhere/images/synchronizationBackgroundButton.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;C:/Everywhere/images/synchronizationBackgroundButtonHover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QWidget" name="shareWidget" native="true">
+          <widget class="QPushButton" name="subscriptionButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;C:/Everywhere/images/subscriptionBackgroundButton.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;C:/Everywhere/images/subscriptionBackgroundButtonHover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QWidget" name="streamWidget" native="true">
+          <widget class="QPushButton" name="streamButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;C:/Everywhere/images/streamBackgroundButton.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;C:/Everywhere/images/streamBackgroundButtonHover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QWidget" name="downloadWidget" native="true">
+          <widget class="QPushButton" name="downloadButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;C:/Everywhere/images/downloadBackgroundButton.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;C:/Everywhere/images/downloadBackgroundButtonHover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QWidget" name="profilWidget" native="true">
+          <widget class="QPushButton" name="profilButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;C:/Everywhere/images/profilBackgroundButton.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;C:/Everywhere/images/profilBackgroundButtonHover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QWidget" name="newWidget" native="true">
+          <widget class="QPushButton" name="libraryButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>333</width>
+             <height>250</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;C:/Everywhere/images/libraryBackgroundButton.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;C:/Everywhere/images/libraryBackgroundButtonHover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>333</width>
+             <height>250</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QWidget" name="widget_2" native="true">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1000</width>
+             <height>750</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QWidget" name="disconnectWidget" native="true">
+          <widget class="QPushButton" name="disconnectButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>333</width>
+             <height>250</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>333</width>
+             <height>250</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;C:/Everywhere/images/disconnectBackgroundButton.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;C:/Everywhere/images/disconnectBackgroundButtonHover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QWidget" name="libraryWidget" native="true">
+          <widget class="QPushButton" name="newButton">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>333</width>
+             <height>250</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>333</width>
+             <height>250</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background: url(&quot;C:/Everywhere/images/newBackgroundButton.png&quot;);
+}
+
+QPushButton:hover {
+	background: url(&quot;C:/Everywhere/images/newBackgroundButtonHover.png&quot;);
+	border: 2px solid white;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
     <item row="0" column="0" colspan="2">
      <widget class="QWidget" name="menuWidget" native="true">
       <property name="minimumSize">
@@ -104,7 +433,7 @@
            <string notr="true">QPushButton#menuButton {
 	border: none;
 	background: transparent;
-	background: url(:/images/menuButton.png);
+	background: url(C:/everywhere/images/menuButton.png);
 
 }</string>
           </property>
@@ -203,8 +532,8 @@
            <string/>
           </property>
           <property name="icon">
-           <iconset resource="resources.qrc">
-            <normaloff>:/images/searchButton.png</normaloff>:/images/searchButton.png</iconset>
+           <iconset>
+            <normaloff>images/searchButton.png</normaloff>images/searchButton.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -225,14 +554,14 @@
           <property name="styleSheet">
            <string notr="true">QPushButton#friendsButton {
 	border: none;
-	background: url(:/images/friendButton.png);
+	background: url(C:/Everywhere/images/friendsButton.png);
 }</string>
           </property>
           <property name="text">
            <string/>
           </property>
           <property name="icon">
-           <iconset resource="resources.qrc">
+           <iconset>
             <normaloff>:/images/friendsButton.png</normaloff>:/images/friendsButton.png</iconset>
           </property>
           <property name="iconSize">
@@ -260,14 +589,11 @@
           <property name="styleSheet">
            <string notr="true">QPushButton#messageButton {
 	border: none;
+	background: url(C:/everywhere/images/messageButton.png)no-repeat;
 }</string>
           </property>
           <property name="text">
            <string/>
-          </property>
-          <property name="icon">
-           <iconset resource="resources.qrc">
-            <normaloff>:/images/messageButton.png</normaloff>:/images/messageButton.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -282,20 +608,17 @@
           <property name="minimumSize">
            <size>
             <width>50</width>
-            <height>0</height>
+            <height>35</height>
            </size>
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton#notifButton {
 	border: none;
+	background: url(C:/everywhere/images/notifButton.png)no-repeat;
 }</string>
           </property>
           <property name="text">
            <string/>
-          </property>
-          <property name="icon">
-           <iconset resource="resources.qrc">
-            <normaloff>:/images/notifButton.png</normaloff>:/images/notifButton.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -310,20 +633,17 @@
           <property name="minimumSize">
            <size>
             <width>50</width>
-            <height>0</height>
+            <height>37</height>
            </size>
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton#optionButton {
 	border: none;
+	background: url(C:/everywhere/images/optionButton.png)no-repeat;
 }</string>
           </property>
           <property name="text">
            <string/>
-          </property>
-          <property name="icon">
-           <iconset resource="resources.qrc">
-            <normaloff>:/images/optionButton.png</normaloff>:/images/optionButton.png</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -337,344 +657,9 @@
       </widget>
      </widget>
     </item>
-    <item row="1" column="0" colspan="2">
-     <widget class="QWidget" name="globalWidget" native="true">
-      <property name="maximumSize">
-       <size>
-        <width>1000</width>
-        <height>750</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QWidget#globalWidget {
-	background: url(:/images/background.png);
-}
-
-border:1px solid white;</string>
-      </property>
-      <widget class="QWidget" name="gridLayoutWidget_2">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>1001</width>
-         <height>751</height>
-        </rect>
-       </property>
-       <layout class="QGridLayout" name="menuLayout">
-        <property name="spacing">
-         <number>0</number>
-        </property>
-        <item row="1" column="1">
-         <widget class="QWidget" name="subscriptionWidget" native="true">
-          <widget class="QPushButton" name="subscriptionButton">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>333</width>
-             <height>381</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton {
-	background: url(&quot;:/images/subscriptionBackground.png&quot;);
-}
-
-QPushButton:hover {
-	background: url(&quot;:/images/subscriptionBackground-hover.png&quot;);
-	border: 2px solid white;
-}</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-          <widget class="QListView" name="listView">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>331</width>
-             <height>251</height>
-            </rect>
-           </property>
-          </widget>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QWidget" name="synchronizationWidget" native="true">
-          <widget class="QPushButton" name="synchronizationButton">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>333</width>
-             <height>250</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton {
-	background: url(&quot;:/images/synchronizationBackground.png&quot;);
-}
-
-QPushButton:hover {
-	background: url(&quot;:/images/synchronizationBackground-hover.png&quot;);
-	border: 2px solid white;
-}</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="QWidget" name="shareWidget" native="true">
-          <widget class="QPushButton" name="shareButton">
-           <property name="geometry">
-            <rect>
-             <x>2</x>
-             <y>0</y>
-             <width>333</width>
-             <height>250</height>
-            </rect>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>333</width>
-             <height>250</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton {
-	background: url(&quot;:/images/shareBackground.png&quot;);
-}
-
-QPushButton:hover {
-	background: url(&quot;:/images/shareBackground-hover.png&quot;);
-	border: 2px solid white;
-}</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>333</width>
-             <height>250</height>
-            </size>
-           </property>
-          </widget>
-         </widget>
-        </item>
-        <item row="1" column="2">
-         <widget class="QWidget" name="streamWidget" native="true">
-          <widget class="QPushButton" name="streamButton">
-           <property name="geometry">
-            <rect>
-             <x>2</x>
-             <y>0</y>
-             <width>333</width>
-             <height>250</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton {
-	background: url(&quot;:/images/streamBackground.png&quot;);
-}
-
-QPushButton:hover {
-	background: url(&quot;:/images/streamBackground-hover.png&quot;);
-	border: 2px solid white;
-}</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QWidget" name="downloadWidget" native="true">
-          <widget class="QPushButton" name="downloadButton">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>333</width>
-             <height>250</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton {
-	background: url(&quot;:/images/downloadBackground.png&quot;);
-}
-
-QPushButton:hover {
-	background: url(&quot;:/images/downloadBackground-hover.png&quot;);
-	border: 2px solid white;
-}</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </widget>
-        </item>
-        <item row="2" column="0">
-         <widget class="QWidget" name="profilWidget" native="true">
-          <widget class="QPushButton" name="profilButton">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>333</width>
-             <height>250</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton {
-	background: url(&quot;:/images/profilBackground.png&quot;);
-}
-
-QPushButton:hover {
-	background: url(&quot;:/images/profilBackground-hover.png&quot;);
-	border: 2px solid white;
-}</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </widget>
-        </item>
-        <item row="0" column="0">
-         <widget class="QWidget" name="newWidget" native="true">
-          <widget class="QPushButton" name="newButton">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>333</width>
-             <height>250</height>
-            </rect>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>333</width>
-             <height>250</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton {
-	background: url(&quot;:/images/newBackground.png&quot;);
-}
-
-QPushButton:hover {
-	background: url(&quot;:/images/newBackground-hover.png&quot;);
-	border: 2px solid white;
-}</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </widget>
-        </item>
-        <item row="2" column="2">
-         <widget class="QWidget" name="disconnectWidget" native="true">
-          <widget class="QPushButton" name="disconnectButton">
-           <property name="geometry">
-            <rect>
-             <x>2</x>
-             <y>0</y>
-             <width>333</width>
-             <height>250</height>
-            </rect>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>333</width>
-             <height>250</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>333</width>
-             <height>250</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton {
-	background: url(&quot;:/images/disconnectBackground.png&quot;);
-}
-
-QPushButton:hover {
-	background: url(&quot;:/images/disconnectBackground-hover.png&quot;);
-	border: 2px solid white;
-}</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QWidget" name="libraryWidget" native="true">
-          <widget class="QPushButton" name="libraryButton">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>333</width>
-             <height>250</height>
-            </rect>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>333</width>
-             <height>250</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton {
-	background: url(&quot;:/images/libraryBackground.png&quot;);
-}
-
-QPushButton:hover {
-	background: url(&quot;:/images/libraryBackground-hover.png&quot;);
-	border: 2px solid white;
-}</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>333</width>
-             <height>250</height>
-            </size>
-           </property>
-          </widget>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-    </item>
    </layout>
   </widget>
  </widget>
- <resources>
-  <include location="resources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

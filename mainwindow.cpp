@@ -18,9 +18,8 @@ MainWindow::MainWindow(QWidget *parent) :
     QDesktopWidget w;
     this->setFixedSize(WIN_WIDTH, WIN_HEIGHT);
 
-    std::string pathcurrent = QDir::currentPath().toStdString().substr(0, pathcurrent.find_last_of("/"));
-    pathcurrent = pathcurrent.substr(0, pathcurrent.find_last_of("/"));
-    _background = new QMovie(std::string(pathcurrent + "/everywhere/images/sound.gif").c_str());
+
+    _background = new QMovie("C:/Everywhere/images/sound.gif");
     ui->background->setMovie(_background);
     _background->start();
 

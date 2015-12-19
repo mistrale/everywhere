@@ -26,6 +26,10 @@ namespace GUI {
 
         void                                closeMenu();
         void                                openMenu();
+
+        void                                createCloseMenu();
+        void                                createOpenMenu();
+
         void                                createQPropertyAnimationButton(const QRect &,
                                                                            const QRect &,
                                                                            QPushButton *,
@@ -39,9 +43,12 @@ namespace GUI {
 
         QParallelAnimationGroup             *_closeAnimations;
         QParallelAnimationGroup             *_openAnimations;
-        QPropertyAnimation                  *_test;
-        QGraphicsItemAnimation              *_test2;
+
+        QPropertyAnimation                  *_closeLastAnimation;
+        QPropertyAnimation                  *_openLastAnimation;
         bool                                _menuOpen;
+
+
     };
 }
 

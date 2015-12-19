@@ -38,22 +38,13 @@
         <file>images/stream.png</file>
         <file>images/synchronization.png</file>
         <file>images/downloadBackground.png</file>
-        <file>images/downloadBackground-hover.png</file>
         <file>images/disconnectBackground.png</file>
-        <file>images/disconnectBackground-hover.png</file>
         <file>images/libraryBackground.png</file>
-        <file>images/libraryBackground-hover.png</file>
         <file>images/newBackground.png</file>
-        <file>images/newBackground-hover.png</file>
         <file>images/profilBackground.png</file>
-        <file>images/profilBackground-hover.png</file>
         <file>images/shareBackground.png</file>
-        <file>images/shareBackground-hover.png</file>
         <file>images/streamBackground.png</file>
-        <file>images/streamBackground-hover.png</file>
         <file>images/subscriptionBackground.png</file>
-        <file>images/subscriptionBackground-hover.png</file>
         <file>images/synchronizationBackground.png</file>
-        <file>images/synchronizationBackground-hover.png</file>
     </qresource>
 </RCC>

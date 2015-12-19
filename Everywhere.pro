@@ -18,19 +18,74 @@ SOURCES += main.cpp\
     connection.cpp \
     registration.cpp \
     everywherewindow.cpp \
-    research.cpp
+    news.cpp
 
 HEADERS  += mainwindow.h \
     connection.h \
     registration.h \
     everywherewindow.h \
-    research.h
+    news.h
 
 FORMS    += mainwindow.ui \
     connection.ui \
     registration.ui \
     everywherewindow.ui \
-    research.ui
+    news.ui
 
-RESOURCES += \
-    resources.qrc
+RESOURCES +=
+
+DISTFILES += \
+    images/disconnectBackgroundButton.png \
+    images/disconnectBackgroundButtonHover.png \
+    images/downloadBackgroundButton.png \
+    images/downloadBackgroundButtonHover.png \
+    images/libraryBackgroundButton.png \
+    images/libraryBackgroundButtonHover.png \
+    images/newBackgroundButton.png \
+    images/newBackgroundButtonHover.png \
+    images/profilBackgroundButton.png \
+    images/profilBackgroundButtonHover.png \
+    images/shareBackgroundButton.png \
+    images/shareBackgroundButtonHover.png \
+    images/streamBackgroundButton.png \
+    images/streamBackgroundButtonHover.png \
+    images/subscriptionBackgroundButton.png \
+    images/subscriptionBackgroundButtonHover.png \
+    images/synchronizationBackgroundButton.png \
+    images/synchronizationBackgroundButtonHover.png \
+    images/account.png \
+    images/back.png \
+    images/background.png \
+    images/backgroundbutton.png \
+    images/backgroundbutton-pressed.png \
+    images/disconnectBackground.png \
+    images/downloadBackground.png \
+    images/email.png \
+    images/everywhere.png \
+    images/everywhere-pressed.png \
+    images/everywhere-signin.png \
+    images/everywhere-signin-pressed.png \
+    images/facebook-signin.png \
+    images/facebook-signin-pressed.png \
+    images/facebook-signup.png \
+    images/facebook-signup-pressed.png \
+    images/friendsButton.png \
+    images/google-signin.png \
+    images/google-signin-pressed.png \
+    images/google-signup.png \
+    images/google-signup-pressed.png \
+    images/libraryBackground.png \
+    images/lock.png \
+    images/logo.png \
+    images/menuButton.png \
+    images/messageButton.png \
+    images/newBackground.png \
+    images/notifButton.png \
+    images/optionButton.png \
+    images/profilBackground.png \
+    images/searchButton.png \
+    images/separator.png \
+    images/shareBackground.png \
+    images/streamBackground.png \
+    images/subscriptionBackground.png \
+    images/synchronizationBackground.png

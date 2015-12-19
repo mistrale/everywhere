@@ -41,6 +41,9 @@
      <height>800</height>
     </size>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background:transparent;</string>
+   </property>
    <widget class="QLabel" name="background">
     <property name="geometry">
      <rect>
@@ -57,14 +60,13 @@
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">background:transparent;</string>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
