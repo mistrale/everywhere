@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>498</width>
-    <height>299</height>
+    <height>380</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
      <x>0</x>
      <y>0</y>
      <width>500</width>
-     <height>300</height>
+     <height>381</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -33,7 +33,7 @@
       <x>0</x>
       <y>0</y>
       <width>501</width>
-      <height>301</height>
+      <height>381</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
@@ -147,12 +147,12 @@
           <x>0</x>
           <y>0</y>
           <width>221</width>
-          <height>221</height>
+          <height>301</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
          <property name="spacing">
-          <number>0</number>
+          <number>10</number>
          </property>
          <item alignment="Qt::AlignHCenter">
           <widget class="QLineEdit" name="emailEdit">
@@ -269,7 +269,36 @@ QPushButton#signinButton:pressed {
 }</string>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string>S'enregister</string>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="ring">
+           <property name="minimumSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="warning">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
            </property>
           </widget>
          </item>
@@ -286,7 +315,7 @@ QPushButton#signinButton:pressed {
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>50</y>
+          <y>90</y>
           <width>211</width>
           <height>111</height>
          </rect>

@@ -4,6 +4,8 @@
 #include <QWidget>
 #include <QMovie>
 
+#include <QtNetwork/QNetworkAccessManager>
+
 namespace Ui {
 class Registration;
 }
@@ -17,8 +19,13 @@ namespace GUI {
          explicit Registration(QWidget *parent = 0);
          ~Registration();
 
+    public slots:
+        void                registerEverywhere();
+
     private:
-        Ui::Registration *ui;
+        Ui::Registration        *ui;
+        QMovie                  *_background;
+        QNetworkAccessManager   _manager;
     };
 }
 

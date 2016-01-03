@@ -31,7 +31,7 @@ MainWindow::MainWindow(QWidget *parent) :
     _registrationWidget->move((WIN_WIDTH - 498) / 2, (WIN_HEIGHT - 299) / 2);
 
     _connectionWidget = new GUI::Connection(this);
-    _connectionWidget->move((WIN_WIDTH - 250)/ 2, (WIN_HEIGHT - 450) / 2);
+    _connectionWidget->move((WIN_WIDTH - 260)/ 2, (WIN_HEIGHT - 540) / 2);
 
     _everywhereWidget->hide();
     _registrationWidget->hide();

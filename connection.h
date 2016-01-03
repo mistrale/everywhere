@@ -17,7 +17,11 @@ namespace GUI {
         ~Connection();
 
     private:
-        Ui::Connection *ui;
+        Ui::Connection  *ui;
+        QMovie          *_background;
+
+    public slots:
+        void        connectEverywhere();
     };
 }
 

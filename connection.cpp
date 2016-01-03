@@ -17,3 +17,9 @@ GUI::Connection::~Connection()
 {
     delete ui;
 }
+
+void            GUI::Connection::connectEverywhere() {
+    _background = new QMovie("C:/Everywhere/images/Ring.gif");
+    ui->ring->setMovie(_background);
+    _background->start();
+}

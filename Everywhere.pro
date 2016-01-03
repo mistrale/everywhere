@@ -7,7 +7,8 @@
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets \
-                                        uitools
+                                        uitools \
+                                        network
 
 TARGET = Everywhere
 TEMPLATE = app
@@ -52,7 +53,6 @@ FORMS    += mainwindow.ui \
     library.ui \
     profil.ui \
     radio.ui \
-    registrationform.ui \
     research.ui \
     stream.ui \
     synchronization.ui
