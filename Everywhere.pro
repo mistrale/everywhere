@@ -18,19 +18,44 @@ SOURCES += main.cpp\
     connection.cpp \
     registration.cpp \
     everywherewindow.cpp \
-    news.cpp
+    news.cpp \
+    disconnect.cpp \
+    download.cpp \
+    library.cpp \
+    profil.cpp \
+    radio.cpp \
+    research.cpp \
+    stream.cpp \
+    synchronization.cpp
 
 HEADERS  += mainwindow.h \
     connection.h \
     registration.h \
     everywherewindow.h \
-    news.h
+    news.h \
+    disconnect.h \
+    download.h \
+    library.h \
+    profil.h \
+    radio.h \
+    research.h \
+    stream.h \
+    synchronization.h
 
 FORMS    += mainwindow.ui \
     connection.ui \
     registration.ui \
     everywherewindow.ui \
-    news.ui
+    news.ui \
+    disconnect.ui \
+    download.ui \
+    library.ui \
+    profil.ui \
+    radio.ui \
+    registrationform.ui \
+    research.ui \
+    stream.ui \
+    synchronization.ui
 
 RESOURCES +=
 

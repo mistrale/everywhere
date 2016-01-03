@@ -50,7 +50,9 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">QWidget#globalWidget {
+	background: url(&quot;C:/everywhere/images/newBackground.png&quot;);
+}</string>
       </property>
       <widget class="QWidget" name="gridLayoutWidget_2">
        <property name="geometry">
@@ -66,8 +68,8 @@
          <number>0</number>
         </property>
         <item row="1" column="1">
-         <widget class="QWidget" name="subscriptionWidget" native="true">
-          <widget class="QPushButton" name="shareButton">
+         <widget class="QWidget" name="researchWidget" native="true">
+          <widget class="QPushButton" name="researchButton">
            <property name="geometry">
             <rect>
              <x>0</x>
@@ -84,11 +86,11 @@
            </property>
            <property name="styleSheet">
             <string notr="true">QPushButton {
-	background: url(&quot;C:/Everywhere/images/shareBackgroundButton.png&quot;);
+	background: url(&quot;C:/Everywhere/images/researchBackgroundButton.png&quot;);
 }
 
 QPushButton:hover {
-	background: url(&quot;C:/Everywhere/images/shareBackgroundButtonHover.png&quot;);
+	background: url(&quot;C:/Everywhere/images/researchBackgroundButtonHover.png&quot;);
 	border: 2px solid white;
 }</string>
            </property>
@@ -132,8 +134,8 @@ QPushButton:hover {
          </widget>
         </item>
         <item row="0" column="2">
-         <widget class="QWidget" name="shareWidget" native="true">
-          <widget class="QPushButton" name="subscriptionButton">
+         <widget class="QWidget" name="radioWidget" native="true">
+          <widget class="QPushButton" name="radioButton">
            <property name="geometry">
             <rect>
              <x>0</x>
@@ -144,11 +146,11 @@ QPushButton:hover {
            </property>
            <property name="styleSheet">
             <string notr="true">QPushButton {
-	background: url(&quot;C:/Everywhere/images/subscriptionBackgroundButton.png&quot;);
+	background: url(&quot;C:/Everywhere/images/radioBackgroundButton.png&quot;);
 }
 
 QPushButton:hover {
-	background: url(&quot;C:/Everywhere/images/subscriptionBackgroundButtonHover.png&quot;);
+	background: url(&quot;C:/Everywhere/images/radioBackgroundButtonHover.png&quot;);
 	border: 2px solid white;
 }</string>
            </property>
@@ -274,16 +276,6 @@ QPushButton:hover {
              <width>333</width>
              <height>250</height>
             </size>
-           </property>
-          </widget>
-          <widget class="QWidget" name="widget_2" native="true">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>1000</width>
-             <height>750</height>
-            </rect>
            </property>
           </widget>
          </widget>

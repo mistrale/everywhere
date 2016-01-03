@@ -2,11 +2,21 @@
 #include "ui_everywherewindow.h"
 #include "ui_news.h"
 #include "news.h"
+#include "library.h"
+#include "radio.h"
+#include "disconnect.h"
+#include "profil.h"
+#include "download.h"
+#include "research.h"
+#include "synchronization.h"
+#include "stream.h"
 
+#include <QDebug>
 #include <QPropertyAnimation>
 #include <QStateMachine>
 #include <QSignalTransition>
 #include <QTimeLine>
+#include <QTimer>
 
 #include <iostream>
 
@@ -20,15 +30,86 @@ GUI::EverywhereWindow::EverywhereWindow(QWidget *parent) :
 
     createCloseMenu();
     createOpenMenu();
-
-    GUI::News *tata = new GUI::News(this);
-    ui->gridLayout->addWidget(tata,2, 0, 1, 2);
-    tata->show();
+    createMenu();
 }
 
 GUI::EverywhereWindow::~EverywhereWindow()
 {
     delete ui;
+}
+
+void            GUI::EverywhereWindow::createMenu() {
+    QWidget     *widget = new GUI::Library(this);
+    _menuWidgets["libraryButton"] = std::make_pair("library", widget);
+    connect(ui->libraryButton, SIGNAL(clicked()), this, SLOT(switchView()));
+    widget->hide();
+    ui->gridLayout->addWidget(widget, 3, 0, 1, 2);
+
+    QWidget     *widget2 = new GUI::News(this);
+    _menuWidgets["newButton"] = std::make_pair("new", widget2);
+    connect(ui->newButton, SIGNAL(clicked()), this, SLOT(switchView()));
+    widget2->hide();
+    ui->gridLayout->addWidget(widget2, 4, 0, 1, 2);
+
+    QWidget     *widget3 = new GUI::Radio(this);
+    _menuWidgets["radioButton"] = std::make_pair("radio", widget3);
+    connect(ui->radioButton, SIGNAL(clicked()), this, SLOT(switchView()));
+    widget3->hide();
+    ui->gridLayout->addWidget(widget3, 5, 0, 1, 2);
+
+    QWidget     *widget4 = new GUI::Download(this);
+    _menuWidgets["downloadButton"] = std::make_pair("download", widget4);
+    connect(ui->downloadButton, SIGNAL(clicked()), this, SLOT(switchView()));
+    widget4->hide();
+    ui->gridLayout->addWidget(widget4, 6, 0, 1, 2);
+
+    QWidget     *widget5 = new GUI::Research(this);
+    _menuWidgets["researchButton"] = std::make_pair("research", widget5);
+    connect(ui->researchButton, SIGNAL(clicked()), this, SLOT(switchView()));
+    widget5->hide();
+    ui->gridLayout->addWidget(widget5, 6, 0, 1, 2);
+
+    QWidget     *widget6 = new GUI::Stream(this);
+    _menuWidgets["streamButton"] = std::make_pair("stream", widget6);
+    connect(ui->streamButton, SIGNAL(clicked()), this, SLOT(switchView()));
+    widget6->hide();
+    ui->gridLayout->addWidget(widget6, 7, 0, 1, 2);
+
+    QWidget     *widget7 = new GUI::Synchronization(this);
+    _menuWidgets["synchronizationButton"] = std::make_pair("synchronization", widget7);
+    connect(ui->synchronizationButton, SIGNAL(clicked()), this, SLOT(switchView()));
+    widget7->hide();
+    ui->gridLayout->addWidget(widget7, 8, 0, 1, 2);
+
+    QWidget     *widget8 = new GUI::Profil(this);
+    _menuWidgets["profilButton"] = std::make_pair("profil", widget8);
+    connect(ui->profilButton, SIGNAL(clicked()), this, SLOT(switchView()));
+    widget8->hide();
+    ui->gridLayout->addWidget(widget8, 9, 0, 1, 2);
+
+    QWidget     *widget9 = new GUI::Disconnect(this);
+    _menuWidgets["disconnectButton"] = std::make_pair("disconnect", widget9);
+    connect(ui->disconnectButton, SIGNAL(clicked()), this, SLOT(switchView()));
+    widget9->hide();
+    ui->gridLayout->addWidget(widget9, 10, 0, 1, 2);
+}
+
+void            GUI::EverywhereWindow::switchView() {
+    QObject* senderObj = sender();
+    ui->globalWidget->setStyleSheet("QWidget#globalWidget { background : url(C:/everywhere/images/"
+                                    + _menuWidgets[senderObj->objectName()].first + "Background.png); }");
+    ui->globalWidget->style()->unpolish(ui->globalWidget);
+    ui->globalWidget->style()->polish(ui->globalWidget);
+    ui->globalWidget->update();
+
+    _current = _menuWidgets[senderObj->objectName()];
+    manageMenu();
+    QTimer::singleShot(400, this, SLOT(updateView()));
+}
+
+void            GUI::EverywhereWindow::updateView() {
+    ui->globalWidget->hide();
+    _current.second->show();
 }
 
 void            GUI::EverywhereWindow::createQPropertyAnimationButton(const QRect &startGeo,
@@ -43,20 +124,21 @@ void            GUI::EverywhereWindow::createQPropertyAnimationButton(const QRec
 }
 
 void            GUI::EverywhereWindow::manageMenu() {
-    if (_menuOpen) {
+    if (_menuOpen)
         closeMenu();
-        _menuOpen = false;
-    } else {
+    else
         openMenu();
-        _menuOpen = true;
-    }
 }
 
 void            GUI::EverywhereWindow::openMenu() {
+    _current.second->hide();
+    ui->globalWidget->show();
+    _menuOpen = true;
     _openLastAnimation->start();
 }
 
 void            GUI::EverywhereWindow::closeMenu() {
+    _menuOpen = false;
     _closeAnimations->start();
 }
 
@@ -71,11 +153,11 @@ void            GUI::EverywhereWindow::createCloseMenu() {
                                    QRect(ui->libraryButton->width(), ui->libraryButton->height(),
                                          0, 0),
                                    ui->libraryButton, _closeAnimations);
-    createQPropertyAnimationButton(QRect(ui->subscriptionButton->x(), ui->subscriptionButton->y(),
-                                         ui->subscriptionButton->width(), ui->subscriptionButton->height()),
-                                   QRect(ui->subscriptionButton->y()  - ui->subscriptionButton->width(),
-                                         ui->subscriptionButton->height(), 0, 0),
-                                   ui->subscriptionButton, _closeAnimations);
+    createQPropertyAnimationButton(QRect(ui->radioButton->x(), ui->radioButton->y(),
+                                         ui->radioButton->width(), ui->radioButton->height()),
+                                   QRect(ui->radioButton->y()  - ui->radioButton->width(),
+                                         ui->radioButton->height(), 0, 0),
+                                   ui->radioButton, _closeAnimations);
     createQPropertyAnimationButton(QRect(ui->streamButton->x(), ui->streamButton->y(),
                                          ui->streamButton->width(), ui->streamButton->height()),
                                    QRect(ui->streamButton->x(), ui->streamButton->y(),
@@ -101,12 +183,12 @@ void            GUI::EverywhereWindow::createCloseMenu() {
                                          ui->downloadButton->width(), 0),
                                    ui->downloadButton, _closeAnimations);
 
-    _closeLastAnimation = new QPropertyAnimation(ui->shareButton, "geometry");
+    _closeLastAnimation = new QPropertyAnimation(ui->researchButton, "geometry");
     _closeLastAnimation->setDuration(200);
-    _closeLastAnimation->setStartValue(QRect(ui->shareButton->x(), ui->shareButton->y(),
-                                   ui->shareButton->width(), ui->shareButton->height()));
-    _closeLastAnimation->setEndValue(QRect(ui->shareButton->width() / 2,
-                                           ui->shareButton->height() / 2, 0, 0));
+    _closeLastAnimation->setStartValue(QRect(ui->researchButton->x(), ui->researchButton->y(),
+                                   ui->researchButton->width(), ui->researchButton->height()));
+    _closeLastAnimation->setEndValue(QRect(ui->researchButton->width() / 2,
+                                           ui->researchButton->height() / 2, 0, 0));
        connect(_closeAnimations, SIGNAL(finished()), _closeLastAnimation, SLOT(start()));
 }
 
@@ -122,11 +204,11 @@ void            GUI::EverywhereWindow::createOpenMenu() {
                                    QRect(ui->libraryButton->x(), ui->libraryButton->y(),
                                          ui->libraryButton->width(), ui->libraryButton->height()),
                                    ui->libraryButton, _openAnimations);
-    createQPropertyAnimationButton(QRect(ui->subscriptionButton->x()  - ui->subscriptionButton->width(),
-                                         ui->subscriptionButton->height(), 0, 0),
-                                   QRect(ui->subscriptionButton->x(), ui->subscriptionButton->y(),
-                                         ui->subscriptionButton->width(), ui->subscriptionButton->height()),
-                                   ui->subscriptionButton, _openAnimations);
+    createQPropertyAnimationButton(QRect(ui->radioButton->x()  - ui->radioButton->width(),
+                                         ui->radioButton->height(), 0, 0),
+                                   QRect(ui->radioButton->x(), ui->radioButton->y(),
+                                         ui->radioButton->width(), ui->radioButton->height()),
+                                   ui->radioButton, _openAnimations);
     createQPropertyAnimationButton(QRect(ui->streamButton->x(), ui->streamButton->y(),
                                          0, ui->streamButton->height()),
                                    QRect(ui->streamButton->x(), ui->streamButton->y(),
@@ -152,12 +234,12 @@ void            GUI::EverywhereWindow::createOpenMenu() {
                                          ui->downloadButton->width(), ui->downloadButton->height()),
                                    ui->downloadButton, _openAnimations);
 
-    _openLastAnimation = new QPropertyAnimation(ui->shareButton, "geometry");
+    _openLastAnimation = new QPropertyAnimation(ui->researchButton, "geometry");
     _openLastAnimation->setDuration(200);
-    _openLastAnimation->setEndValue(QRect(ui->shareButton->x(), ui->shareButton->y(),
-                                   ui->shareButton->width(), ui->shareButton->height()));
-    _openLastAnimation->setStartValue(QRect(ui->shareButton->width() / 2,
-                                           ui->shareButton->height() / 2, 0, 0));
+    _openLastAnimation->setEndValue(QRect(ui->researchButton->x(), ui->researchButton->y(),
+                                   ui->researchButton->width(), ui->researchButton->height()));
+    _openLastAnimation->setStartValue(QRect(ui->researchButton->width() / 2,
+                                           ui->researchButton->height() / 2, 0, 0));
 
     connect(_openLastAnimation, SIGNAL(finished()), _openAnimations, SLOT(start()));
 }

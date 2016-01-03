@@ -26,6 +26,7 @@ namespace GUI {
 
         void                                closeMenu();
         void                                openMenu();
+        void                                createMenu();
 
         void                                createCloseMenu();
         void                                createOpenMenu();
@@ -37,6 +38,8 @@ namespace GUI {
 
     public slots:
         void                                manageMenu();
+        void                                switchView();
+        void                                updateView();
 
     private:
         Ui::EverywhereWindow *ui;
@@ -48,7 +51,9 @@ namespace GUI {
         QPropertyAnimation                  *_openLastAnimation;
         bool                                _menuOpen;
 
-
+        typedef std::pair<QString, QWidget *> Widget;
+        std::map<QString, Widget>             _menuWidgets;
+        Widget                               _current;
     };
 }
 
