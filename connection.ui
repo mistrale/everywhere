@@ -76,7 +76,7 @@
       </widget>
      </item>
      <item alignment="Qt::AlignHCenter|Qt::AlignTop">
-      <widget class="QLineEdit" name="usernameEdit">
+      <widget class="QLineEdit" name="emailEdit">
        <property name="minimumSize">
         <size>
          <width>190</width>
@@ -90,7 +90,7 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">QLineEdit#usernameEdit {
+        <string notr="true">QLineEdit#emailEdit {
 	border-radius: 10px;
 	background: url(C:/Everywhere/images/account.png)  no-repeat;
 	padding-left: 45 px;
@@ -100,7 +100,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>Username or email</string>
+        <string>Email</string>
        </property>
       </widget>
      </item>
@@ -291,6 +291,28 @@ QPushButton#signinButton:pressed {
        </property>
       </widget>
      </item>
+     <item>
+      <widget class="QLabel" name="warningText">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: transparent;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+	font-weight: bold;
+	color :red;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
      <item alignment="Qt::AlignHCenter">
       <widget class="QLabel" name="ring">
        <property name="minimumSize">
@@ -310,19 +332,6 @@ QPushButton#signinButton:pressed {
        </property>
        <property name="text">
         <string/>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="warning">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>40</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>TextLabel</string>
        </property>
       </widget>
      </item>

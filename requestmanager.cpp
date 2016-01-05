@@ -13,8 +13,18 @@ Tool::RequestManager::~RequestManager() {
     delete manager;
 }
 
-void            Tool::RequestManager::connectionRequest(const std::string &username, const std::string &email) {
+QNetworkReply   *Tool::RequestManager::connectionRequest(const QString &email, const QString &password) {
+    QUrl        url("http://62.210.237.116:8080/signin");
 
+    QNetworkRequest request(url);
+
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
+
+    QUrlQuery params;
+    params.addQueryItem("email", email);
+    params.addQueryItem("password", password);
+
+    return manager->post(request, params.toString(QUrl::FullyEncoded).toUtf8());
 }
 
 QNetworkReply   *Tool::RequestManager::registrationRequest(const QString &email, const QString &username, const QString &password) {

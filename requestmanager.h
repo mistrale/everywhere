@@ -10,11 +10,11 @@ namespace Tool {
         RequestManager();
         ~RequestManager();
 
-        void            connectionRequest(const std::string &, const std::string &);
+        QNetworkReply   *connectionRequest(const QString &, const QString &);
         QNetworkReply   *registrationRequest(const QString &email, const QString &username,
                                         const QString &password);
 
-        static QNetworkAccessManager       *manager;
+        QNetworkAccessManager       *manager;
     };
 }
 

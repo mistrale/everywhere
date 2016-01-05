@@ -3,6 +3,9 @@
 
 #include <QWidget>
 #include  <QNetworkAccessManager>
+#include <QNetworkReply>
+
+#include "requestmanager.h"
 
 namespace Ui {
 class Connection;
@@ -17,13 +20,20 @@ namespace GUI {
         explicit Connection(QWidget *parent = 0);
         ~Connection();
 
+        bool                eventFilter(QObject* object, QEvent* event);
+
+
     private:
         Ui::Connection  *ui;
         QMovie          *_background;
+        Tool::RequestManager   _manager;
+        QNetworkReply           *_reply;
 
     public slots:
-        void        connectEverywhere();
-        void        replyFinished(QNetworkReply *);
+        void                connectEverywhere();
+        void                replyFinished(QNetworkReply *);
+        void                onError(QNetworkReply::NetworkError code);
+
     };
 }
 

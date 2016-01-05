@@ -31,13 +31,8 @@ GUI::Registration::~Registration()
 
 void            GUI::Registration::registerEverywhere() {
     ui->warningText->setText("");
-    std::cout << "On rentre la" << std::endl;
-
-
-    _reply = _manager.registrationRequest(ui->usernameEdit->text(), ui->passwordEdit->text(), ui->emailEdit->text());
-
+    _reply = _manager.registrationRequest(ui->emailEdit->text(), ui->usernameEdit->text(), ui->passwordEdit->text());
      connect(_reply, SIGNAL(error(QNetworkReply::NetworkError)), this, SLOT(onError(QNetworkReply::NetworkError)));
-
      _background = new QMovie("C:/Everywhere/images/Ring.gif");
      ui->ring->setMovie(_background);
     _background->start();
