@@ -27,7 +27,8 @@ SOURCES += main.cpp\
     radio.cpp \
     research.cpp \
     stream.cpp \
-    synchronization.cpp
+    synchronization.cpp \
+    requestmanager.cpp
 
 HEADERS  += mainwindow.h \
     connection.h \
@@ -41,7 +42,8 @@ HEADERS  += mainwindow.h \
     radio.h \
     research.h \
     stream.h \
-    synchronization.h
+    synchronization.h \
+    requestmanager.h
 
 FORMS    += mainwindow.ui \
     connection.ui \

@@ -2,6 +2,7 @@
 #define CONNECTION_H
 
 #include <QWidget>
+#include  <QNetworkAccessManager>
 
 namespace Ui {
 class Connection;
@@ -22,6 +23,7 @@ namespace GUI {
 
     public slots:
         void        connectEverywhere();
+        void        replyFinished(QNetworkReply *);
     };
 }
 

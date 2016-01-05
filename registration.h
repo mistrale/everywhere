@@ -3,8 +3,10 @@
 
 #include <QWidget>
 #include <QMovie>
-
 #include <QtNetwork/QNetworkAccessManager>
+#include <QNetworkReply>
+
+#include "requestmanager.h"
 
 namespace Ui {
 class Registration;
@@ -19,13 +21,18 @@ namespace GUI {
          explicit Registration(QWidget *parent = 0);
          ~Registration();
 
+        bool                eventFilter(QObject* object, QEvent* event);
+
     public slots:
         void                registerEverywhere();
+        void                replyFinished(QNetworkReply *);
+        void                onError(QNetworkReply::NetworkError code);
 
     private:
         Ui::Registration        *ui;
         QMovie                  *_background;
-        QNetworkAccessManager   _manager;
+        Tool::RequestManager   _manager;
+        QNetworkReply           *_reply;
     };
 }
 

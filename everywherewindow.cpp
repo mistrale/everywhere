@@ -31,6 +31,8 @@ GUI::EverywhereWindow::EverywhereWindow(QWidget *parent) :
     createCloseMenu();
     createOpenMenu();
     createMenu();
+
+    _current = _menuWidgets["newButton"];
 }
 
 GUI::EverywhereWindow::~EverywhereWindow()
