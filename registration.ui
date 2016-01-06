@@ -84,7 +84,7 @@
            <property name="styleSheet">
             <string notr="true">QPushButton#backButton {
 	border:none;
-	background: url(:/images/back.png);
+	background: url(C:/everywhere/images/back.png);
 }</string>
            </property>
            <property name="text">
@@ -112,7 +112,7 @@
 }</string>
            </property>
            <property name="text">
-            <string>SIGN IN</string>
+            <string>SIGN UP</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>

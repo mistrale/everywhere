@@ -34,6 +34,9 @@ namespace GUI {
         void                replyFinished(QNetworkReply *);
         void                onError(QNetworkReply::NetworkError code);
 
+    signals:
+        void                showEverywhere();
+
     };
 }
 

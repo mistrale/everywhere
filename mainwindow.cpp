@@ -28,7 +28,7 @@ MainWindow::MainWindow(QWidget *parent) :
     _everywhereWidget = new GUI::EverywhereWindow(this);
 
     _registrationWidget = new GUI::Registration(this);
-    _registrationWidget->move((WIN_WIDTH - 498) / 2, (WIN_HEIGHT - 299) / 2);
+    _registrationWidget->move((WIN_WIDTH - 498) / 2, (WIN_HEIGHT - 460) / 2);
 
     _connectionWidget = new GUI::Connection(this);
     _connectionWidget->move((WIN_WIDTH - 260)/ 2, (WIN_HEIGHT - 540) / 2);

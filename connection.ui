@@ -34,7 +34,7 @@
       <x>0</x>
       <y>0</y>
       <width>261</width>
-      <height>563</height>
+      <height>573</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -68,7 +68,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>SIGN UP</string>
+        <string>SIGNIN</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -161,7 +161,7 @@ QPushButton#connectButton:pressed {
 }</string>
        </property>
        <property name="text">
-        <string>Sign up</string>
+        <string>Signin</string>
        </property>
       </widget>
      </item>
@@ -287,7 +287,7 @@ QPushButton#signinButton:pressed {
 }</string>
        </property>
        <property name="text">
-        <string>SIGN IN</string>
+        <string>Sign up</string>
        </property>
       </widget>
      </item>

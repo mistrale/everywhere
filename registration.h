@@ -22,6 +22,7 @@ namespace GUI {
          ~Registration();
 
         bool                eventFilter(QObject* object, QEvent* event);
+        bool                checkField();
 
     public slots:
         void                registerEverywhere();

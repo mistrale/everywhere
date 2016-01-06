@@ -1,6 +1,7 @@
 #include "connection.h"
 #include "ui_connection.h"
 #include "requestmanager.h"
+#include "localdata.h"
 
 #include <QMovie>
 #include <QJsonDocument>
@@ -15,7 +16,7 @@ GUI::Connection::Connection(QWidget *parent) :
 
     connect(ui->signinButton, SIGNAL(clicked()), parent, SLOT(showRegistration()));
     connect(ui->connectButton, SIGNAL(clicked()), this, SLOT(connectEverywhere()));
-
+    connect(this, SIGNAL(showEverywhere()), parent, SLOT(showEverywhere()));
 
     QObject::connect(_manager.manager, SIGNAL(finished(QNetworkReply *)), this, SLOT(replyFinished(QNetworkReply *)));
 
@@ -44,18 +45,26 @@ void            GUI::Connection::replyFinished(QNetworkReply *reply) {
     QJsonObject json = doc.object();
     int status = json["status"].toObject().value("code").toInt();
 
-    if (status == 200) {
-        ui->warningText->setText("Connection ok!");
-        ui->warningText->setStyleSheet("color: green;");
-    } else {
-        QString message = json["status"].toObject().value("message").toString();
-        ui->warningText->setText(message);
-        ui->warningText->setStyleSheet("color : red;");
-    }
+    std::cout<< bytes.toStdString() << std::endl;
     if (_background != NULL) {
         _background->stop();
         delete _background;
         _background = NULL;
+    }
+
+    if (status == 200) {
+        emit showEverywhere();
+        QJsonObject body = json["body"].toObject();
+
+        Model::LocalData    *data = Model::LocalData::instance();
+
+        data->Values["token"] = body.value("token").toString();
+        data->Values["email"] = body.value("email").toString();
+        data->Values["password"] = ui->passwordEdit->text();
+    } else {
+        QString message = json["status"].toObject().value("message").toString();
+        ui->warningText->setText(message);
+        ui->warningText->setStyleSheet("color : red;");
     }
 }
 
@@ -69,11 +78,17 @@ void            GUI::Connection::onError(QNetworkReply::NetworkError code) {
 }
 
 bool            GUI::Connection::eventFilter(QObject *object, QEvent *event) {
+    if(event->type() == QEvent::FocusIn) {
+        if (object->objectName() == "passwordEdit") {
+            ui->passwordEdit->setEchoMode(QLineEdit::Password);
+        }
+    }
     if(event->type() == QEvent::MouseButtonPress) {
         if (object->objectName() == "emailEdit")
             ui->emailEdit->setText("");
-        else if (object->objectName() == "passwordEdit")
+        else if (object->objectName() == "passwordEdit") {
             ui->passwordEdit->setText("");
+        }
     }
     return false;
 }

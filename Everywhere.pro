@@ -4,7 +4,8 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui \
+            multimediawidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets \
                                         uitools \
@@ -28,7 +29,8 @@ SOURCES += main.cpp\
     research.cpp \
     stream.cpp \
     synchronization.cpp \
-    requestmanager.cpp
+    requestmanager.cpp \
+    localdata.cpp
 
 HEADERS  += mainwindow.h \
     connection.h \
@@ -43,7 +45,8 @@ HEADERS  += mainwindow.h \
     research.h \
     stream.h \
     synchronization.h \
-    requestmanager.h
+    requestmanager.h \
+    localdata.h
 
 FORMS    += mainwindow.ui \
     connection.ui \
