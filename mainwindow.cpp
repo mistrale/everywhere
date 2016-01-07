@@ -14,6 +14,9 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+    QCoreApplication::setOrganizationName("Aude Sikorav");
+    QCoreApplication::setApplicationName("Everywhere");
+
     ui->setupUi(this);
     QDesktopWidget w;
     this->setFixedSize(WIN_WIDTH, WIN_HEIGHT);
@@ -31,7 +34,7 @@ MainWindow::MainWindow(QWidget *parent) :
     _registrationWidget->move((WIN_WIDTH - 498) / 2, (WIN_HEIGHT - 460) / 2);
 
     _connectionWidget = new GUI::Connection(this);
-    _connectionWidget->move((WIN_WIDTH - 260)/ 2, (WIN_HEIGHT - 540) / 2);
+    _connectionWidget->move((WIN_WIDTH - 431)/ 2, (WIN_HEIGHT - 461) / 2);
 
     _everywhereWidget->hide();
     _registrationWidget->hide();
@@ -43,20 +46,22 @@ MainWindow::~MainWindow()
 }
 
 void        MainWindow::showConnection() {
+    ui->background->show();
+   _background->start();
+   _everywhereWidget->hide();
    _registrationWidget->hide();
    _connectionWidget->show();
 }
 
 void        MainWindow::showRegistration() {
+    _everywhereWidget->hide();
    _connectionWidget->hide();
    _registrationWidget->show();
 }
 
 void        MainWindow::showEverywhere() {
    _background->stop();
-   delete _background;
    ui->background->hide();
    _connectionWidget->hide();
-
    _everywhereWidget->show();
 }

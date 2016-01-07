@@ -5,6 +5,7 @@
 
 #include <QMovie>
 #include <QJsonDocument>
+#include <QSettings>
 
 #include <iostream>
 
@@ -22,6 +23,16 @@ GUI::Connection::Connection(QWidget *parent) :
 
     ui->emailEdit->installEventFilter(this);
     ui->passwordEdit->installEventFilter(this);
+
+    QSettings settings("C:/everywhere/settings.ini",
+                       QSettings::IniFormat);
+    if (settings.value("registerAccount").toBool() == true) {
+        ui->emailEdit->setText(settings.value("emailAccount").toString());
+        ui->passwordEdit->setText(settings.value("passwordAccount").toString());
+        ui->connectedBox->setChecked(true);
+        ui->passwordEdit->setEchoMode(QLineEdit::Password);
+
+    }
 }
 
 GUI::Connection::~Connection()
@@ -51,20 +62,41 @@ void            GUI::Connection::replyFinished(QNetworkReply *reply) {
         delete _background;
         _background = NULL;
     }
-
     if (status == 200) {
         emit showEverywhere();
         QJsonObject body = json["body"].toObject();
 
         Model::LocalData    *data = Model::LocalData::instance();
+        QSettings settings("C:/everywhere/settings.ini",
+                           QSettings::IniFormat);
 
+        if (ui->connectedBox->isChecked())
+            settings.setValue("registerAccount", true);
+        else
+            settings.setValue("registerAccount", false);
+
+        if (settings.value("registerAccount").toBool()) {
+            ui->passwordEdit->setText(ui->passwordEdit->text());
+            ui->emailEdit->setText(ui->emailEdit->text());
+            settings.setValue("emailAccount", ui->emailEdit->text());
+            settings.setValue("passwordAccount", ui->passwordEdit->text());
+
+        } else {
+            ui->passwordEdit->setText("password");
+            ui->emailEdit->setText("Email");
+            settings.setValue("emailAccount", "");
+            settings.setValue("passwordAccount", "");
+        }
         data->Values["token"] = body.value("token").toString();
         data->Values["email"] = body.value("email").toString();
         data->Values["password"] = ui->passwordEdit->text();
     } else {
         QString message = json["status"].toObject().value("message").toString();
         ui->warningText->setText(message);
-        ui->warningText->setStyleSheet("color : red;");
+        ui->warningText->setStyleSheet("background: transparent;"
+                                       "font: 12pt \"MS Shell Dlg 2\";"
+                                       "font-weight: bold;"
+                                       "color :red;");
     }
 }
 

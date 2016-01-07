@@ -518,19 +518,16 @@ QPushButton:hover {
  	min-width:25px;
  	min-height:25px;
 	margin-right:150px;
+	background: url(C:/everywhere/images/searchButton.png);
 }</string>
           </property>
           <property name="text">
            <string/>
           </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>images/searchButton.png</normaloff>images/searchButton.png</iconset>
-          </property>
           <property name="iconSize">
            <size>
-            <width>20</width>
-            <height>20</height>
+            <width>24</width>
+            <height>24</height>
            </size>
           </property>
          </widget>
@@ -632,6 +629,43 @@ QPushButton:hover {
            <string notr="true">QPushButton#optionButton {
 	border: none;
 	background: url(C:/everywhere/images/optionButton.png)no-repeat;
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="logoutButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>30</width>
+            <height>37</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>30</width>
+            <height>37</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton#logoutButton {
+	border: none;
+	background: url(C:/Everywhere/images/logoutButton.png) no-repeat;
 }</string>
           </property>
           <property name="text">

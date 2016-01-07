@@ -10,6 +10,7 @@
 #include "research.h"
 #include "synchronization.h"
 #include "stream.h"
+#include "resultsearch.h"
 
 #include <QDebug>
 #include <QPropertyAnimation>
@@ -26,8 +27,9 @@ GUI::EverywhereWindow::EverywhereWindow(QWidget *parent) :
     _menuOpen(true)
 {
     ui->setupUi(this);
-    QObject::connect(ui->menuButton, SIGNAL(clicked()), this, SLOT(manageMenu()));
 
+    QObject::connect(ui->menuButton, SIGNAL(clicked()), this, SLOT(manageMenu()));
+    QObject::connect(ui->logoutButton, SIGNAL(clicked()), parent, SLOT(showConnection()));
     createCloseMenu();
     createOpenMenu();
     createMenu();
@@ -94,6 +96,34 @@ void            GUI::EverywhereWindow::createMenu() {
     connect(ui->disconnectButton, SIGNAL(clicked()), this, SLOT(switchView()));
     widget9->hide();
     ui->gridLayout->addWidget(widget9, 10, 0, 1, 2);
+
+    QWidget     *widget10 = new GUI::ResultSearch(this);
+    _menuWidgets["searchButton"] = std::make_pair("resultSearch", widget10);
+    connect(ui->searchButton, SIGNAL(clicked()), this, SLOT(getSearchResult()));
+    widget10->hide();
+    ui->gridLayout->addWidget(widget10, 11, 0, 1, 2);
+}
+
+void            GUI::EverywhereWindow::getSearchResult() {
+    QObject* senderObj = sender();
+    _current.second->hide();
+
+    ui->globalWidget->setStyleSheet("QWidget#globalWidget { background : url(C:/everywhere/images/"
+                                    + _menuWidgets[senderObj->objectName()].first + "Background.png); }");
+    ui->globalWidget->style()->unpolish(ui->globalWidget);
+    ui->globalWidget->style()->polish(ui->globalWidget);
+    ui->globalWidget->update();
+
+    _current = _menuWidgets[senderObj->objectName()];
+
+
+    if (_menuOpen) {
+        manageMenu();
+        QTimer::singleShot(400, this, SLOT(updateView()));
+    } else {
+        _current.second->show();
+    }
+
 }
 
 void            GUI::EverywhereWindow::switchView() {

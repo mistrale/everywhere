@@ -36,10 +36,12 @@ namespace GUI {
                                                                            QPushButton *,
                                                                            QParallelAnimationGroup *);
 
+
     public slots:
         void                                manageMenu();
         void                                switchView();
         void                                updateView();
+        void                                getSearchResult();
 
     private:
         Ui::EverywhereWindow *ui;
