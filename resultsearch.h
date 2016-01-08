@@ -18,6 +18,8 @@ namespace GUI {
 
     private:
         Ui::ResultSearch *ui;
+
+        QWidget     *_parent;
     };
 }
 

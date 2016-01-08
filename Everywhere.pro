@@ -31,7 +31,8 @@ SOURCES += main.cpp\
     synchronization.cpp \
     requestmanager.cpp \
     localdata.cpp \
-    resultsearch.cpp
+    resultsearch.cpp \
+    result.cpp
 
 HEADERS  += mainwindow.h \
     connection.h \
@@ -48,7 +49,8 @@ HEADERS  += mainwindow.h \
     synchronization.h \
     requestmanager.h \
     localdata.h \
-    resultsearch.h
+    resultsearch.h \
+    result.h
 
 FORMS    += mainwindow.ui \
     connection.ui \
@@ -63,7 +65,8 @@ FORMS    += mainwindow.ui \
     research.ui \
     stream.ui \
     synchronization.ui \
-    resultsearch.ui
+    resultsearch.ui \
+    result.ui
 
 RESOURCES +=
 

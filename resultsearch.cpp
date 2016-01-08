@@ -3,9 +3,11 @@
 
 GUI::ResultSearch::ResultSearch(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::ResultSearch)
+    ui(new Ui::ResultSearch),
+    _parent(parent)
 {
     ui->setupUi(this);
+    connect(ui->pushButton, SIGNAL(clicked()), parent, SLOT(showResult()));
 }
 
 GUI::ResultSearch::~ResultSearch()

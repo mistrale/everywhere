@@ -42,6 +42,7 @@ namespace GUI {
         void                                switchView();
         void                                updateView();
         void                                getSearchResult();
+        void                                showResult();
 
     private:
         Ui::EverywhereWindow *ui;

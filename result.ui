@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ResultSearch</class>
- <widget class="QWidget" name="ResultSearch">
+ <class>Result</class>
+ <widget class="QWidget" name="Result">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -16,6 +16,12 @@
     <height>750</height>
    </size>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>750</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
@@ -25,7 +31,7 @@
      <x>0</x>
      <y>0</y>
      <width>1001</width>
-     <height>751</height>
+     <height>741</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -33,20 +39,23 @@
      <widget class="QWidget" name="widget" native="true">
       <property name="styleSheet">
        <string notr="true">QWidget#widget {
-	background: url(C:/everywhere/images/resultSearchBackground.png);
+	background: url(C:/everywhere/images/researchBackground.png);
 }</string>
       </property>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QLabel" name="label">
        <property name="geometry">
         <rect>
-         <x>430</x>
-         <y>350</y>
-         <width>93</width>
-         <height>28</height>
+         <x>320</x>
+         <y>340</y>
+         <width>71</width>
+         <height>141</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">color:white;</string>
+       </property>
        <property name="text">
-        <string>GoTest</string>
+        <string>TEST</string>
        </property>
       </widget>
      </widget>

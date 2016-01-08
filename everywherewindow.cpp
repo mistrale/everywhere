@@ -11,6 +11,7 @@
 #include "synchronization.h"
 #include "stream.h"
 #include "resultsearch.h"
+#include "result.h"
 
 #include <QDebug>
 #include <QPropertyAnimation>
@@ -102,6 +103,17 @@ void            GUI::EverywhereWindow::createMenu() {
     connect(ui->searchButton, SIGNAL(clicked()), this, SLOT(getSearchResult()));
     widget10->hide();
     ui->gridLayout->addWidget(widget10, 11, 0, 1, 2);
+
+    QWidget     *widget11 = new GUI::Result(this);
+    _menuWidgets["ResultView"] = std::make_pair("Result", widget11);
+    widget11->hide();
+    ui->gridLayout->addWidget(widget11, 12, 0, 1, 2);
+}
+
+void            GUI::EverywhereWindow::showResult() {
+    _current.second->hide();
+    _current = _menuWidgets["ResultView"];
+    _current.second->show();
 }
 
 void            GUI::EverywhereWindow::getSearchResult() {
@@ -116,14 +128,12 @@ void            GUI::EverywhereWindow::getSearchResult() {
 
     _current = _menuWidgets[senderObj->objectName()];
 
-
     if (_menuOpen) {
         manageMenu();
         QTimer::singleShot(400, this, SLOT(updateView()));
     } else {
         _current.second->show();
     }
-
 }
 
 void            GUI::EverywhereWindow::switchView() {
