@@ -21,7 +21,7 @@ GUI::Result::Result(QWidget *parent) :
     _player->setVideoOutput(_video);
     _video->setGeometry(0, 0, 1000, 750);
     _video->show();
-    //_player->play();
+   //_player->play();
 
     test = new QPushButton(this);
     test->setText("PWET");

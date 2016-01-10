@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1054</width>
+    <width>1001</width>
     <height>750</height>
    </rect>
   </property>
@@ -60,6 +60,9 @@
         </property>
         <item row="2" column="0">
          <widget class="QTabWidget" name="tabWidget">
+          <property name="styleSheet">
+           <string notr="true">QTabWidget,QTabWidget::pane,QTabBar { background: transparent; border: 0px; }</string>
+          </property>
           <widget class="QWidget" name="tab">
            <attribute name="title">
             <string>Tab 1</string>
@@ -100,6 +103,9 @@
              <number>15</number>
             </property>
             <property name="rightMargin">
+             <number>15</number>
+            </property>
+            <property name="bottomMargin">
              <number>15</number>
             </property>
             <property name="spacing">
@@ -154,7 +160,7 @@
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">QLabel#lastnameLabel {
+                   <string notr="true">QLabel#passwordConfirmationLabel {
 	color: rgb(3, 151, 229);
 	font: 9pt &quot;MS Shell Dlg 2&quot;;
 }</string>
@@ -176,7 +182,7 @@
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">QLineEdit#lastnameLineEdit {
+                   <string notr="true">QLineEdit#passwordConfirmationLineEdit {
 	background: white;
 	border: none;
 	border-bottom: 1px solid rgb(3, 151, 229);
@@ -214,7 +220,7 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>381</width>
+                 <width>391</width>
                  <height>41</height>
                 </rect>
                </property>
@@ -313,27 +319,51 @@ QCheckBox#emailPublic::indicator:checked:pressed {
               </widget>
              </widget>
             </item>
-            <item row="3" column="1" colspan="2">
-             <widget class="QPushButton" name="pushButton">
-              <property name="text">
-               <string>PushButton</string>
-              </property>
-             </widget>
-            </item>
             <item row="0" column="0" rowspan="4">
-             <widget class="QWidget" name="widget_2" native="true">
+             <widget class="QWidget" name="imageWidget" native="true">
               <property name="minimumSize">
                <size>
-                <width>175</width>
-                <height>250</height>
+                <width>170</width>
+                <height>210</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>175</width>
-                <height>16777215</height>
+                <width>170</width>
+                <height>210</height>
                </size>
               </property>
+              <widget class="QWidget" name="verticalLayoutWidget_2">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>171</width>
+                 <height>211</height>
+                </rect>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_2">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QWidget" name="image" native="true">
+                  <property name="styleSheet">
+                   <string notr="true">QWidget#image {
+	background: url(C:/everywhere/images/avatar.png);
+}</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_2">
+                  <property name="text">
+                   <string>PushButton</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
              </widget>
             </item>
             <item row="2" column="1">
@@ -362,7 +392,7 @@ QCheckBox#emailPublic::indicator:checked:pressed {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>381</width>
+                 <width>391</width>
                  <height>42</height>
                 </rect>
                </property>
@@ -487,7 +517,7 @@ QCheckBox#lastnamePublic::indicator:checked:pressed {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>381</width>
+                 <width>391</width>
                  <height>42</height>
                 </rect>
                </property>
@@ -657,7 +687,7 @@ QCheckBox#firstnamePublic::indicator:checked:pressed {
                    </size>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">QLineEdit#lastnameLineEdit {
+                   <string notr="true">QLineEdit#passwordLineEdit {
 	background: white;
 	border: none;
 	border-bottom: 1px solid rgb(3, 151, 229);
@@ -750,6 +780,29 @@ QCheckBox#firstnamePublic::indicator:checked:pressed {
                 </item>
                </layout>
               </widget>
+             </widget>
+            </item>
+            <item row="3" column="1" colspan="2">
+             <widget class="QPushButton" name="updateProfil">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton#updateProfil {
+	border: 1px solid rgb(71, 71, 71);
+	background: white;
+	color: rgb(3, 151, 229);
+	font: 9pt &quot;MS Shell Dlg 2&quot;;
+	font-weight:bold;
+	border-radius:10px;
+}</string>
+              </property>
+              <property name="text">
+               <string>Update profil</string>
+              </property>
              </widget>
             </item>
            </layout>
